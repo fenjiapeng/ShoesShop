@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alipay-sdk-java-4.34.47.ALL">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java-4.34.47.ALL.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

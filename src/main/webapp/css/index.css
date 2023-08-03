@@ -1,0 +1,98 @@
+﻿
+a{
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+.lunbo{
+    position: relative;
+    top: 50px;
+    width: 80%;
+}
+.content{
+    width: 80%;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+    top: 75px;
+    left: 15%;
+}
+#item{
+    width: 80%;
+    height: 80%;
+
+}
+.item{
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+
+}
+.item.active{
+    opacity:1;
+}
+img{
+    width: 100%;
+}
+#btn-left{
+    width: 30px;
+    height: 69px;
+    font-size: 30px;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    line-height: 69px;
+    padding-left:5px;
+    z-index: 10;/*始终显示在图片的上层*/
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-60%);/*使按钮向上偏移居中对齐*/
+    cursor: pointer;
+    opacity: 0;/*平时隐藏*/
+}
+.lunbo:hover #btn-left{
+    /*鼠标滑入，显示图标*/
+    opacity: 1;
+}
+
+#btn-right{
+    width: 26px;
+    height: 69px;
+    font-size: 30px;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    line-height: 69px;
+    padding-left: 5px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-60%);
+}
+.lunbo:hover #btn-right{
+    opacity: 1;
+}
+#circle{
+    position: absolute;
+    height: 400px;
+    display: flex;
+    bottom: 100px;
+    right: 25px;
+    margin-top: 800px;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.4);
+    cursor: pointer;
+    margin: 5px;
+
+}
+.white{
+    background-color: #FFFFFF;
+}
