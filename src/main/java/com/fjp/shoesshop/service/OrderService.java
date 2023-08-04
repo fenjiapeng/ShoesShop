@@ -21,4 +21,5 @@ public interface OrderService {
     List<Orders> findAll();
 
     int deleteOrder(String id);
+    boolean updateOrders(Orders order);
 }

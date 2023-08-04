@@ -11,7 +11,7 @@ public class Goods {
     private String name;
     private String image;
     private double price;
-    private String desc;
+    private String gdesc;
     private int stock;
     private int type_id;
     private double size;
@@ -23,7 +23,7 @@ public class Goods {
                 ", name='" + name + '\'' +
                 ", image='" + image + '\'' +
                 ", price=" + price +
-                ", desc='" + desc + '\'' +
+                ", desc='" + gdesc + '\'' +
                 ", stock=" + stock +
                 ", type_id=" + type_id +
                 ", size=" + size +
@@ -70,12 +70,12 @@ public class Goods {
         this.price = price;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getGdesc() {
+        return gdesc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setGdesc(String gdesc) {
+        this.gdesc = gdesc;
     }
 
     public int getStock() {

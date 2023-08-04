@@ -18,7 +18,6 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public List<Goods> findAll() {
         List<Goods> all = goodsDao.findAll();
-        System.out.println("goods"+all);
         return all;
     }
 
@@ -32,5 +31,11 @@ public class GoodsServiceImpl implements GoodsService {
     public Goods findById(int id) {
         Goods byId = goodsDao.findById(id);
         return byId;
+    }
+
+    @Override
+    public boolean updateGood(Goods goods) {
+        int i = goodsDao.updateGood(goods);
+        return i>0;
     }
 }

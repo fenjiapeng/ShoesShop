@@ -20,5 +20,6 @@ public interface UserDao {
     int updateUser(User user);
 
     int deleteUser(int id);
+    int addUser(User user);
 
 }

@@ -83,4 +83,15 @@ public class OrderDaoImpl implements OrderDao {
         }
         return 0;
     }
+
+    @Override
+    public int updateOrders(Orders order) {
+        String sql = "update orders set address=?,name=?,phone=? where id=?";
+        try {
+           return queryRunner.update(sql,order.getAddress(),order.getName(),order.getPhone(),order.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

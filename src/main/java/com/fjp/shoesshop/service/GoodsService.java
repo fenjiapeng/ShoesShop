@@ -14,4 +14,5 @@ public interface GoodsService {
     List<Goods> findAll();
     boolean deleteGoods(int id);
     Goods findById(int id);
+    boolean updateGood(Goods goods);
 }

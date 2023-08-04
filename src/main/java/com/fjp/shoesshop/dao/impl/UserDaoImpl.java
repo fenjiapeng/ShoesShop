@@ -92,5 +92,16 @@ public class UserDaoImpl implements UserDao {
         return 0;
     }
 
+    @Override
+    public int addUser(User user) {
+        String sql = "insert into user values(?,?,?,?,?,?,?)";
+        try {
+           return queryRunner.update(sql, user.getId(),user.getUsername(),user.getEmail(),user.getPassword(),user.getName(),user.getPhone(),user.getAddress());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
 
 }

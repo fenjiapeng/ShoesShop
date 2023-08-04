@@ -54,10 +54,12 @@
             <td>${u.name}</td>
             <td><img width="50" src="img/${u.image}"></td>
             <td>${u.price}</td>
-            <td>${u.desc}</td>
+            <td>${u.gdesc}</td>
             <td>${u.stock}</td>
             <td>${u.type_id}</td>
-            <td><a class="btn btn-warning" href="GoodsServlet" >修改</a>&nbsp;<a class="btn btn-danger" href="GoodsServlet?option=deleteGoods&id=${u.id}">删除</a></td>
+            <td><a class="btn btn-warning" href="GoodsServlet?option=findById&id=${u.id}" >修改</a>&nbsp;
+                <a class="btn btn-danger" href="GoodsServlet?option=deleteGoods&id=${u.id}">删除</a>
+                <a class="btn btn-link" href="GoodsServlet?option=findImageById&id=${u.id}">图片修改</a></td>
         </tr>
     </c:forEach>
 </table>

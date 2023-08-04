@@ -38,13 +38,14 @@
 
 <body>
 <a href="manger.jsp">< 返回上一页</a>
-<form id="add_user" >
-    昵称：<input type="text">
-    邮箱：<input type="text">
-    密码：<input type="text">
-    收件人：<input type="text">
-    电话：<input type="text">
-    地址：<input type="text">
+<form id="add_user"  action="UserMangerServlet?option=addUser" method="post">
+    id：<input type="text" name="id">
+    昵称：<input type="text" name="username">
+    邮箱：<input type="text" name="email">
+    密码：<input type="text" name="password">
+    收件人：<input type="text" name="name">
+    电话：<input type="text" name="phone">
+    地址：<input type="text" name="address">
     <input type="submit" value="新增" class="btn btn-primary">
 </form>
 <table id="user_table"class="table table-striped table-hover">

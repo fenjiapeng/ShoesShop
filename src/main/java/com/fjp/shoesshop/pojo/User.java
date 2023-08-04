@@ -9,8 +9,6 @@ public class User {
   private String name;
   private String phone;
   private String address;
-  private boolean isadmin = false;
-  private boolean isvalidate = false;
 
   public User() {
   }
@@ -43,6 +41,15 @@ public class User {
     this.email = email;
   }
 
+  public User(int id, String username, String email, String password, String name, String phone, String address ) {
+    this.id = id;
+    this.username = username;
+    this.email = email;
+    this.password = password;
+    this.name = name;
+    this.phone = phone;
+    this.address = address;
+  }
   public User( String username, String email, String password, String name, String phone, String address ) {
     this.id = id;
     this.username = username;
@@ -52,7 +59,6 @@ public class User {
     this.phone = phone;
     this.address = address;
   }
-
   public String getPassword() {
     return password;
   }
@@ -89,21 +95,6 @@ public class User {
   }
 
 
-  public boolean isIsadmin() {
-    return isadmin;
-  }
-
-  public void setIsadmin(boolean isadmin) {
-    this.isadmin = isadmin;
-  }
-
-  public boolean isIsvalidate() {
-    return isvalidate;
-  }
-
-  public void setIsvalidate(boolean isvalidate) {
-    this.isvalidate = isvalidate;
-  }
 
   @Override
   public String toString() {
@@ -115,8 +106,6 @@ public class User {
             ", name='" + name + '\'' +
             ", phone='" + phone + '\'' +
             ", address='" + address + '\'' +
-            ", isadmin=" + isadmin +
-            ", isvalidate=" + isvalidate +
             '}';
   }
 }

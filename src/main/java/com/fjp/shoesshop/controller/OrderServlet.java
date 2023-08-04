@@ -159,6 +159,8 @@ public class OrderServlet extends OrderBaseServlet {
         String id = request.getParameter("id");
         Orders order = orderService.getOrderByOid(id);
         request.getSession().setAttribute("order",order);
+        request.getRequestDispatcher("orderupdate.jsp").forward(request, response);
+
 
     }
         public void deleteOrder(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
@@ -167,5 +169,18 @@ public class OrderServlet extends OrderBaseServlet {
             int i = orderService.deleteOrder(id);
            response.sendRedirect("OrderServlet");
         }
-
+    public void updateOrders(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        OrderService orderService = new OrderServiceImpl();
+        String id = request.getParameter("id");
+        String address = request.getParameter("address");
+        String name = request.getParameter("name");
+        String phone = request.getParameter("phone");
+        Orders orders = new Orders();
+        orders.setPhone(phone);
+        orders.setAddress(address);
+        orders.setName(name);
+        orders.setId(id);
+        boolean b = orderService.updateOrders(orders);
+        response.sendRedirect("OrderServlet");
+    }
 }

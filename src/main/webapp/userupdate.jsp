@@ -22,7 +22,8 @@
     </style>
 </head>
 <body>
-<form method="post" action="UserMangerServlet?option=updateUser">
+<form method="post" action="${pageContext.request.contextPath}/UserMangerServlet?option=updateUser">
+    id：<input type="text" readonly name="id" value="${user.id}">
     昵称：<input type="text" name="username" value="${user.username}">
     邮箱：<input type="text" name="email" value="${user.email}">
     密码：<input type="text" name="password" value="${user.password}">

@@ -50,4 +50,17 @@ public class GoodsDaoImpl implements GoodsDao {
         }
         return null;
     }
+
+    @Override
+    public int updateGood(Goods goods) {
+        String sql = "update goods set name=?,image=?,price=?,gdesc=?,stock=?,type_id=? where id=?";
+        try {
+           return queryRunner.update(sql,goods.getName()
+                    ,goods.getImage()
+                    ,goods.getPrice(),goods.getGdesc(),goods.getStock(),goods.getType_id(),goods.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

@@ -40,6 +40,8 @@ public class UserMangerServlet extends UserBaseServlet {
 
     }
     protected void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        int uid = id == null ? 0: Integer.parseInt(id);
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -47,7 +49,7 @@ public class UserMangerServlet extends UserBaseServlet {
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
 
-        User user = new User(username,email,password,name,phone,address);
+        User user = new User(uid,username,email,password,name,phone,address);
         boolean b = userService.updateUser(user);
         if (b) {
             response.sendRedirect("UserMangerServlet");
@@ -56,7 +58,21 @@ public class UserMangerServlet extends UserBaseServlet {
         }
 
     }
-    protected void deleteUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void addUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        int uid = id == null ? 0: Integer.parseInt(id);
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String name = request.getParameter("name");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+
+        User user = new User(uid,username,email,password,name,phone,address);
+        boolean b = userService.addUser(user);
+        response.sendRedirect("UserMangerServlet");
+    }
+        protected void deleteUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         boolean b = userService.deleteUser(id);
         resp.sendRedirect("UserMangerServlet");

@@ -62,4 +62,10 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
+    @Override
+    public boolean addUser(User user) {
+        int i = userDao.addUser(user);
+        return i>0;
+    }
+
 }

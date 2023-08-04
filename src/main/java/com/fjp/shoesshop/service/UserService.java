@@ -17,5 +17,5 @@ public interface UserService {
     User findById(int id);
     boolean updateUser(User user);
     boolean deleteUser(int id);
-
+    boolean addUser(User user);
 }

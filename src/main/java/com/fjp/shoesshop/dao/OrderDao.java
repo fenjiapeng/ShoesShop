@@ -21,4 +21,6 @@ public interface OrderDao {
 
     List<Orders> findAll();
     int deleteOrder(String id);
+
+    int updateOrders(Orders order);
 }
