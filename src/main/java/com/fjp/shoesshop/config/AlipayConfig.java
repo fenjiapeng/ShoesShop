@@ -7,9 +7,9 @@ package com.fjp.shoesshop.config;
 @SuppressWarnings("all")
 public class AlipayConfig {
     // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数
-    public static String return_url = "http://vjrv5v.natappfree.cc/ShoesShop_war_exploded/aliPayReturnUrlServlet";  // 此处使用外网ip(使用免费的花生壳或者netapp产生的外网域名)
+    public static String return_url = "http://uxhjhy.natappfree.cc/ShoesShop_war_exploded/aliPayReturnUrlServlet";  // 此处使用外网ip(使用免费的花生壳或者netapp产生的外网域名)
     // 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-    public static String notify_url = " http://vjrv5v.natappfree.cc/ShoesShop_war_exploded/notify";
+    public static String notify_url = "http://uxhjhy.natappfree.cc/ShoesShop_war_exploded/notify";
     // 应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
     public static String app_id = "9021000124643147";
     // 支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。

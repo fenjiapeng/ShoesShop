@@ -75,7 +75,7 @@
         <td align="center"><h2>${goods.name}</h2></td>
     </tr>
     <tr>
-        <td align="center"><h3>${goods.desc}</h3></td>
+        <td align="center"><h3>${goods.gdesc}</h3></td>
     </tr>
     <tr>
         <td align="center"><h3>￥${goods.price}</h3></td>
