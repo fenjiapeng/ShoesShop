@@ -21,4 +21,16 @@ public class GoodsServiceImpl implements GoodsService {
         System.out.println("goods"+all);
         return all;
     }
+
+    @Override
+    public boolean deleteGoods(int id) {
+        int i = goodsDao.deleteGoods(id);
+        return i>0;
+    }
+
+    @Override
+    public Goods findById(int id) {
+        Goods byId = goodsDao.findById(id);
+        return byId;
+    }
 }

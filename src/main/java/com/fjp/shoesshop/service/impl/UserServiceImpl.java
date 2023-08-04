@@ -53,4 +53,13 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
+    @Override
+    public boolean deleteUser(int id) {
+        int i = userDao.deleteUser(id);
+        if (i !=0){
+            return true;
+        }
+        return false;
+    }
+
 }

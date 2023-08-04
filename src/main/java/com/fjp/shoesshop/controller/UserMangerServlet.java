@@ -21,6 +21,7 @@ public class UserMangerServlet extends UserBaseServlet {
         findAll(req, resp);
         updateUser(req, resp);
         findById(req, resp);
+        deleteUser(req, resp);
     }
 
     protected void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -55,7 +56,11 @@ public class UserMangerServlet extends UserBaseServlet {
         }
 
     }
-
+    protected void deleteUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        int id = Integer.parseInt(req.getParameter("id"));
+        boolean b = userService.deleteUser(id);
+        resp.sendRedirect("UserMangerServlet");
+    }
         @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

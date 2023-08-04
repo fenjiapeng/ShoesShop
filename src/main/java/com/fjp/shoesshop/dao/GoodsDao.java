@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface GoodsDao {
 
-    int deleteGoods();
+    int deleteGoods(int id);
     List<Goods> findAll();
+    Goods findById(int id);
 }

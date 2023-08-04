@@ -58,7 +58,7 @@
             <td>${u.address}</td>
             <td>${u.name}</td>
             <td>${u.phone}</td>
-            <td><a class="btn btn-warning" href="OrderServlet" >修改</a>&nbsp;<a class="btn btn-danger">删除</a></td>
+            <td><a class="btn btn-warning" href="OrderServlet" >修改</a>&nbsp;<a class="btn btn-danger" href="OrderServlet?option=deleteOrder&id=${u.id}">删除</a></td>
         </tr>
     </c:forEach>
 </table>

@@ -59,4 +59,10 @@ public class OrderServiceImpl implements OrderService {
         List<Orders> all = orderDao.findAll();
         return all;
     }
+
+    @Override
+    public int deleteOrder(String id) {
+        int i = orderDao.deleteOrder(id);
+        return i;
+    }
 }

@@ -81,5 +81,16 @@ public class UserDaoImpl implements UserDao {
         return 0;
     }
 
+    @Override
+    public int deleteUser(int id) {
+        String sql = "delete from user where id = ?";
+        try {
+           return queryRunner.update(sql, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
 
 }

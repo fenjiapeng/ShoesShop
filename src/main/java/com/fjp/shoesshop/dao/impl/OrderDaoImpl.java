@@ -72,4 +72,15 @@ public class OrderDaoImpl implements OrderDao {
         }
         return null;
     }
+
+    @Override
+    public int deleteOrder(String id) {
+        String sql = "delete from orders where id =?";
+        try {
+           return queryRunner.update(sql, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

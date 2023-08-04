@@ -19,4 +19,6 @@ public interface OrderService {
     void updateOrderState(Orders order) throws SQLException;
 
     List<Orders> findAll();
+
+    int deleteOrder(String id);
 }

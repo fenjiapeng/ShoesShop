@@ -20,4 +20,5 @@ public interface OrderDao {
     void updateOrder(Orders order) throws SQLException;
 
     List<Orders> findAll();
+    int deleteOrder(String id);
 }

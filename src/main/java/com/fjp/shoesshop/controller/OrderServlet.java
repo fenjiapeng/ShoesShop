@@ -154,4 +154,18 @@ public class OrderServlet extends OrderBaseServlet {
         session.setAttribute("order",order);
         response.sendRedirect("ordermanger.jsp");
     }
+    public void findByIdOrder(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        OrderService orderService = new OrderServiceImpl();
+        String id = request.getParameter("id");
+        Orders order = orderService.getOrderByOid(id);
+        request.getSession().setAttribute("order",order);
+
+    }
+        public void deleteOrder(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        OrderService orderService = new OrderServiceImpl();
+            String id = request.getParameter("id");
+            int i = orderService.deleteOrder(id);
+           response.sendRedirect("OrderServlet");
+        }
+
 }

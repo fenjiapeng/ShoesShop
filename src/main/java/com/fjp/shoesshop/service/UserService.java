@@ -16,5 +16,6 @@ public interface UserService {
     List<User> findAll();
     User findById(int id);
     boolean updateUser(User user);
+    boolean deleteUser(int id);
 
 }

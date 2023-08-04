@@ -57,7 +57,7 @@
             <td>${u.desc}</td>
             <td>${u.stock}</td>
             <td>${u.type_id}</td>
-            <td><a class="btn btn-warning" href="GoodsServlet" >修改</a>&nbsp;<a class="btn btn-danger">删除</a></td>
+            <td><a class="btn btn-warning" href="GoodsServlet" >修改</a>&nbsp;<a class="btn btn-danger" href="GoodsServlet?option=deleteGoods&id=${u.id}">删除</a></td>
         </tr>
     </c:forEach>
 </table>

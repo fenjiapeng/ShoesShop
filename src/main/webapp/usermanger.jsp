@@ -67,10 +67,10 @@
         <td>${u.name}</td>
         <td>${u.phone}</td>
         <td>${u.address}</td>
-        <td><a class="btn btn-warning" href="UserMangerServlet?option=findById&id=${u.id}" >修改</a>&nbsp;<a class="btn btn-danger">删除</a></td>
+        <td><a class="btn btn-warning" href="UserMangerServlet?option=findById&id=${u.id}" >修改</a>&nbsp;<a class="btn btn-danger" href="UserMangerServlet?option=deleteUser&id=${u.id}">删除</a></td>
     </tr>
     </c:forEach>
 </table>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src=" http//cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
 </body>
 </html>
